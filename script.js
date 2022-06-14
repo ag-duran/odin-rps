@@ -9,7 +9,7 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
-  switch (playerSelection) {
+  switch (playerSelection.toLowerCase()) {
     case "rock":
       if (computerSelection == "Rock") return "It's a tie!";
       else if (computerSelection == "Scissors")
@@ -31,7 +31,16 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-const playerSelection = "rock";
-const computerSelection = computerPlay();
-console.log(`The player chooses ${playerSelection}`);
-console.log(playRound(playerSelection, computerSelection));
+function game() {
+  for (let i = 0; i < 5; i++) {
+    let playerSelection = prompt("Please, write down your selection");
+    console.log(
+      "The player chooses " +
+        playerSelection.charAt(0).toUpperCase() +
+        playerSelection.slice(1).toLowerCase()
+    );
+    console.log(playRound(playerSelection, computerPlay()));
+  }
+}
+
+game();
