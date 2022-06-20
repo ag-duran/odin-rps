@@ -5,7 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock, Paper, Scissors</title>
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <div id="header">ROCK, PAPER, SCISSORS!</div>
+    <div id="content-divider">
+      <div class="scoreboard" id="player-container">
+        <h1>Player's Score</h1>
+        <p id="player-score">0</p>
+      </div>
+      <div class="scoreboard" id="computer-container">
+        <h1>Computer's Score</h1>
+        <p id="computer-score">0</p>
+      </div>
+    </div>
+    <div id="results-container">
+      <p id="results-announcement">
+        Choose one of the following options! First one to five points wins!
+      </p>
+    </div>
+    <div id="button-container">
+      <button class="selection-button" id="rock-button">ROCK</button>
+      <button class="selection-button" id="paper-button">PAPER</button>
+      <button class="selection-button" id="scissors-button">SCISSORS</button>
+    </div>
+  </body>
 </html>
